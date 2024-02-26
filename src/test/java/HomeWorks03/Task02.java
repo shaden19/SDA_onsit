@@ -1,4 +1,4 @@
-package HW.homeWorks;
+package HomeWorks03;
 
 import org.junit.AfterClass;
 import org.junit.Assert;

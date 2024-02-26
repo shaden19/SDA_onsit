@@ -1,12 +1,12 @@
-package HW.homeWorks;
+package HomeWorks03;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
@@ -34,7 +34,7 @@ Close all pages.
 
     @AfterClass
     public static void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
 
 
@@ -52,6 +52,18 @@ Close all pages.
         driver.findElement(By.name("commit")).click();
     }
 
+    @Test
+    public void testIfTextIsVisible (){
+
+        boolean isMessageDisplayed = driver.findElement(By.xpath("//div[@class='alert alert-danger']")).isDisplayed();
+        Assert.assertTrue(isMessageDisplayed);
+        if(isMessageDisplayed == true){
+            System.out.println("Registration Failed");
+        }else {
+            System.out.println("Registered");
+        }
+
+    }
 
 
 }

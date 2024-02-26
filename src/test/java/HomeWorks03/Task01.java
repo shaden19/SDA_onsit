@@ -1,7 +1,6 @@
-package HW.homeWorksday03;
+package HomeWorks03;
 
 
-import org.checkerframework.checker.units.qual.K;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -62,8 +61,8 @@ Close with AfterClass.
         driver.findElement(searchBox).sendKeys("The Curious Case of Benjamin Button" + Keys.ENTER);
         String totalResult = driver.findElement(results).getText();
         System.out.println("totalResult = " + totalResult);
-        //WebElement resultElement =driver.findElement(results);
-        // System.out.println("resultElement.getText() = " + resultElement.getText());
+        WebElement resultElement =driver.findElement(results);
+        System.out.println("resultElement.getText() = " + resultElement.getText());
 
     }
 

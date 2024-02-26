@@ -39,11 +39,7 @@ public class C02Example {
 
     }
 
-    public void deleteButtons(){
-        WebElement button = driver.findElement(By.xpath("//*[.='Add Element']"));
-        for (int i = 0; i < numberOfButtons; i++) {
-            button.click();
-    }
+
 
 }
 
