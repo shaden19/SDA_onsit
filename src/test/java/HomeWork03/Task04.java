@@ -1,4 +1,4 @@
-package HomeWorks03;
+package HomeWork03;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -36,16 +36,11 @@ Print the result.
         //driver.quit();
     }
 
-
-    @Test
-    public void testClick(){
-        //Click on Simple Calculator under Micro Apps.
-        driver.findElement(By.id("calculatetest")).click();
-    }
-
     @Test
     public void testEnterValue(){
         //Type any number in the first input.
+        driver.findElement(By.id("calculatetest")).click();
+
         driver.findElement(By.id("number1")).sendKeys("12");
         //Type any number in the second input.
         driver.findElement(By.id("number2")).sendKeys("1");
