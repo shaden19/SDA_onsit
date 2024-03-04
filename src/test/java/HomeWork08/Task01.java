@@ -1,5 +1,6 @@
 package HomeWork08;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -52,6 +53,11 @@ public class Task01 extends TestBase {
 
         //Drag and drop the second 5000 button to the Amount section in CREDIT SIDE
         actions.dragAndDrop(Button2_5000,CREDITAmounttside).perform();
+
+        // Verify the visibility of the "Perfect" text
+        WebElement perfectText = driver.findElement(By.xpath("//a[contains(text(),'Perfect')]"));
+        boolean isPerfectTextVisible = perfectText.isDisplayed();
+        Assert.assertTrue("The 'Perfect' text is not visible", isPerfectTextVisible);
 
 
 
